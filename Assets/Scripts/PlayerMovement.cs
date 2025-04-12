@@ -27,7 +27,26 @@ public class PlayerMovement : MonoBehaviour
         Debug.Log(x);
         //float y = Input.GetAxisRaw("Vertical");
 
-        if(x > 0)
+
+         if (rigi.velocity.y !=0)
+        {
+            anim.Play("Fall");
+            if (x > 0)
+            {
+                if (anim.gameObject.transform.localScale.x < 0)
+                {
+                    anim.gameObject.transform.localScale = new Vector3(1, 1, 1);
+                }
+            }
+            else if (x < 0)
+            {
+                if (anim.gameObject.transform.localScale.x > 0)
+                {
+                    anim.gameObject.transform.localScale = new Vector3(-1, 1, 1);
+                }
+            }
+        }
+        else if(x > 0)
         {
             anim.Play("PlayerWalk");
             if (anim.gameObject.transform.localScale.x < 0)
@@ -44,6 +63,7 @@ public class PlayerMovement : MonoBehaviour
                 anim.gameObject.transform.localScale = new Vector3(-1, 1, 1);
             }
         }
+        
         else
         {
             anim.Play("Idle");
@@ -59,6 +79,8 @@ public class PlayerMovement : MonoBehaviour
         
         if (grounded && Input.GetKey(KeyCode.Space))
         {
+            anim.Play("Jump");
+            
             Debug.Log("Grounded");
             rigi.velocity = new Vector2(rigi.velocity.x, jumpForce);
         }
