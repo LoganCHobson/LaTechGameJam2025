@@ -284,7 +284,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb03509c02d3b774d9689a360324f0d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isGrabbed: 0
   eye: {fileID: 106327873}
 --- !u!58 &106327880
 CircleCollider2D:
@@ -371,7 +370,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 0.9685534, g: 0.16142547, b: 0.16142547, a: 0.392}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
