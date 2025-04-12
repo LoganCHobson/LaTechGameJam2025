@@ -10,7 +10,7 @@ public class Door : MonoBehaviour
 
     private void Update()
     {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.down, 2);
+        RaycastHit2D hit = Physics2D.BoxCast(transform.position, new Vector2(2,2), 0, Vector2.down, 2);
 
 
         if (hit.collider.gameObject.CompareTag("Player"))
