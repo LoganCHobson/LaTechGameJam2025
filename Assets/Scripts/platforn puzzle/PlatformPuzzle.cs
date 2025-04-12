@@ -60,13 +60,17 @@ public class PlatformPuzzle : MonoBehaviour{
                 //do nothing
                     break;
                 case State._1_MIDDLE:
+                    SoundManager.Play(SoundType.CORRECT);
                     print ("got 1");
                     break;
                 case State._2_LEFT:
                     print ("Got 2");
+                    SoundManager.Play(SoundType.CORRECT);
                     break;
                 case State._3_RIGHT_FINISHED:
                     print ("Got all 3!");
+                    SoundManager.Play(SoundType.FINISHED);
+                    puzzleComplete = true;
                     PuzzleDoor.SetActive(false);
                     break;
                 case State.ERROR:
