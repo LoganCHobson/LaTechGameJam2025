@@ -3,24 +3,42 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Events;
 
 [System.Serializable]
-public class Item
+abstract public class Item : MonoBehaviour
 {
     public Guid guid = Guid.NewGuid();
     public GameObject gfx;
-    
-    void Start()
+
+    [HideInInspector]
+    public GameObject inventoryGfx; //Don't ref this 
+
+    public UnityEvent onPickUp;
+
+
+    private void Awake()
     {
         if (guid == Guid.Empty)
         {
             guid = Guid.NewGuid();
         }
     }
-
-    // Update is called once per frame
-    void Update()
+    void Start()
     {
-        
+       
     }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.CompareTag("Player"))
+        {
+           
+            onPickUp.Invoke();
+            PickedUp();
+        }
+    }
+
+    abstract public void PickedUp();
+
 }

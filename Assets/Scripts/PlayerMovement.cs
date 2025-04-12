@@ -63,9 +63,5 @@ public class PlayerMovement : MonoBehaviour
             rigi.velocity = new Vector2(rigi.velocity.x, jumpForce);
         }
 
-
-
-
-
     }
 }
