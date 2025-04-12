@@ -9,7 +9,7 @@ public class Eye1 : MonoBehaviour{
 
     void OnTriggerEnter2D(Collider2D collision){
         if (collision.CompareTag("Player")){
-            Debug.Log("ceye 1 grabbed");
+            Debug.Log("eye 1 grabbed");
             eye.SetActive(false);
             isGrabbed = true;
         }
