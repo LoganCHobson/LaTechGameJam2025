@@ -16,10 +16,18 @@ public class DialogController : MonoBehaviour
 
     public float typingSpeed = 0.1f;
 
-
+    private Animator anim;
     private int charIndex;
     private string fullMessage;
     private float timer;
+
+    private void Start()
+    {
+        anim = GetComponent<Animator>();    
+        
+    }
+
+
     public void Dialog(string message)
     {
         text.text = "";
@@ -43,8 +51,16 @@ public class DialogController : MonoBehaviour
 
             if(charIndex >= fullMessage.Length)
             {
-                isTyping = false;    
+                isTyping = false;
+                anim.Play("Fade");
             }
         }
+    }
+
+    //Called by anim
+    private void TurnOff()
+    {
+        canvas.SetActive(false);
+
     }
 }
