@@ -17,8 +17,13 @@ public class RenderManager : MonoBehaviour
 public enum modes
 {
     None = 0,
-    Infared = 1,
+    Grey = 1,
     Red = 2,
     Green = 3,
+    Blue = 4,
+    RedBlue = 5,
+    RedGreen = 6,
+    GreenBlue = 7,
+
 
 }
