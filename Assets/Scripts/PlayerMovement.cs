@@ -12,16 +12,43 @@ public class PlayerMovement : MonoBehaviour
 
     public LayerMask groundLayer;
 
+    private Animator anim;
+
     private bool grounded;
     void Start()
     {
         rigi = GetComponent<Rigidbody2D>();
+        anim = GetComponentInChildren<Animator>();
     }
 
     void Update()
     {
         float x = Input.GetAxisRaw("Horizontal");
+        Debug.Log(x);
         //float y = Input.GetAxisRaw("Vertical");
+
+        if(x > 0)
+        {
+            anim.Play("PlayerWalk");
+            if (anim.gameObject.transform.localScale.x < 0)
+            {
+                anim.gameObject.transform.localScale = new Vector3(1, 1, 1);
+            }
+        }
+
+        else if(x < 0) 
+        {
+            anim.Play("PlayerWalk");
+            if (anim.gameObject.transform.localScale.x > 0)
+            {
+                anim.gameObject.transform.localScale = new Vector3(-1, 1, 1);
+            }
+        }
+        else
+        {
+            anim.Play("Idle");
+        }
+        
 
         rigi.velocity = new Vector2(x * speed, rigi.velocity.y);
 
