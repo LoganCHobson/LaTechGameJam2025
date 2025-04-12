@@ -6,8 +6,6 @@ public class Door : MonoBehaviour
     public Transform spawnpoint;
 
 
-
-
     private void Update()
     {
         RaycastHit2D hit = Physics2D.BoxCast(transform.position, new Vector2(2,2), 0, Vector2.down, 2);
