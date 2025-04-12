@@ -74,6 +74,7 @@ public class PlatformPuzzle : MonoBehaviour{
                     PuzzleDoor.SetActive(false);
                     break;
                 case State.ERROR:
+                    SoundManager.Play(SoundType.WRONG);
                     ChangeState(State.IDLE);
                     break;
             }
