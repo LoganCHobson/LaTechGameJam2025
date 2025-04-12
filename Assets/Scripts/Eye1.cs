@@ -12,6 +12,7 @@ public class Eye1 : MonoBehaviour{
             Debug.Log("eye 1 grabbed");
             eye.SetActive(false);
             isGrabbed = true;
+            SoundManager.Play(SoundType.GRABBED);
         }
     }
 

@@ -5,6 +5,7 @@ public enum SoundType {
     CORRECT,
     WRONG,
     FINISHED,
+    GRABBED,
 }
 
 public class SoundCollection {
@@ -58,6 +59,7 @@ public class SoundManager : MonoBehaviour {
             { SoundType.CORRECT, new("correct") },
             { SoundType.WRONG, new("wrong") },
             { SoundType.FINISHED, new("finished") },
+            { SoundType.GRABBED, new("grabbed")},
         };
     }
 
