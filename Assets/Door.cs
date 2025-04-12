@@ -6,9 +6,9 @@ public class Door : MonoBehaviour
     public GameObject destinationDoor;
     public Transform spawnpoint;
 
-
     public bool unlocked = true;
 
+   
     private void Update()
     {
 
@@ -35,5 +35,7 @@ public class Door : MonoBehaviour
 
         }
     }
+
+  
 
 }
