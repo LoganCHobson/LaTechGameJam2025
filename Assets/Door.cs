@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Door : MonoBehaviour
@@ -6,25 +7,33 @@ public class Door : MonoBehaviour
     public Transform spawnpoint;
 
 
+    public bool unlocked = true;
+
     private void Update()
     {
+
         RaycastHit2D hit = Physics2D.BoxCast(transform.position, new Vector2(2,2), 0, Vector2.down, 2);
 
 
         if (hit.collider.gameObject.CompareTag("Player"))
         {
+            GameObject player = hit.collider.gameObject;
             if (Input.GetKeyDown(KeyCode.Tab))
             {
+                if (!unlocked)
+                {
+                    player.GetComponentInChildren<DialogController>().Dialog("Door is locked! Find the Key!");
+                }
+                else
+                {
+                    player.transform.root.position = destinationDoor.GetComponent<Door>().spawnpoint.position;
+                }
                 //Play animation code or whatever.
 
-                hit.collider.gameObject.gameObject.transform.root.position = destinationDoor.GetComponent<Door>().spawnpoint.position;
+                
             }
 
         }
     }
 
-
 }
-
-        
-

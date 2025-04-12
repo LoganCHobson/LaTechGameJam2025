@@ -1,0 +1,50 @@
+using System.Collections;
+using System.Collections.Generic;
+using TMPro;
+using UnityEngine;
+
+public class DialogController : MonoBehaviour
+{
+    /// <summary>
+    /// Basically just get component and call this in any if statement. For example, you can check the invintory if the player has a key. If not, then run dialog.
+    /// </summary>
+    /// 
+    public TMP_Text text;
+    public GameObject canvas;
+
+    private bool isTyping = false;
+
+    public float typingSpeed = 0.1f;
+
+
+    private int charIndex;
+    private string fullMessage;
+    private float timer;
+    public void Dialog(string message)
+    {
+        text.text = "";
+        isTyping = true;
+        timer = 0;
+        charIndex = 0;
+        canvas.SetActive(true);
+        fullMessage = message;
+    }
+
+    private void Update()
+    {
+        if (!isTyping) return;
+
+        timer += Time.deltaTime;
+        while (timer > typingSpeed && charIndex < fullMessage.Length)
+        {
+            timer -= typingSpeed;
+            text.text += fullMessage[charIndex];
+            charIndex++;
+
+            if(charIndex >= fullMessage.Length)
+            {
+                isTyping = false;    
+            }
+        }
+    }
+}
