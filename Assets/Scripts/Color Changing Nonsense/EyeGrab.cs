@@ -28,6 +28,7 @@ public class EyeGrab : MonoBehaviour {
             ui.SetActive(true);
             Debug.Log("Ui is "+ ui);
             Debug.Log(ui.activeInHierarchy);
+            SoundManager.Play(SoundType.GRABBED);
 
             if (red.activeInHierarchy && blue.activeInHierarchy){
                 redBlue.SetActive(true);
@@ -38,7 +39,9 @@ public class EyeGrab : MonoBehaviour {
             if (red.activeInHierarchy && green.activeInHierarchy){
                 redGreen.SetActive(true);
             }
-
+            if (red.activeInHierarchy && green.activeInHierarchy && blue.activeInHierarchy){
+                Game.GameComplete();
+            }
         }
     }
 }
