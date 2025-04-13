@@ -19,9 +19,14 @@ public class Game : MonoBehaviour{
 
     void Start(){
         mainMenuScreen.SetActive(true);
+        eventGrab.GetComponent<RenderManager>().ChangeRenderFeature(modes.Grey);
         Instance = this;
         Red.SetActive(false);
+        Green.SetActive(false);
         Blue.SetActive(false);
+        RedBlue.SetActive(false);
+        RedGreen.SetActive(false);
+        GreenBlue.SetActive(false);
     }
     public void StartGame(){
         mainMenuScreen.SetActive(false);
