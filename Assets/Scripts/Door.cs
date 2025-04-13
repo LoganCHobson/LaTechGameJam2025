@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Door : MonoBehaviour
 {
@@ -8,6 +9,11 @@ public class Door : MonoBehaviour
     public bool unlocked = true;
 
     public Key key;
+
+
+    public UnityEvent openDoor;
+    public UnityEvent closeDoor;
+    public UnityEvent lockedDoor;
 
     private void Update()
     {
@@ -23,6 +29,7 @@ public class Door : MonoBehaviour
                 
                 if (!unlocked && Inventory.Instance.FindItem(key.guid) == null)
                 {
+                    lockedDoor.Invoke();
                     DialogController.Instance.Dialog("Door is locked! Find the Key!");
                 }
                 else
@@ -32,6 +39,7 @@ public class Door : MonoBehaviour
                         Inventory.Instance.RemoveItem(key);
                         unlocked = true;
                     }
+                    openDoor.Invoke();
                     player.transform.root.position = destinationDoor.GetComponent<Door>().spawnpoint.position;
                 }
                 //Play animation code or whatever.
@@ -40,6 +48,11 @@ public class Door : MonoBehaviour
             }
 
         }
+    }
+
+    public void OnCloseDoor()
+    {
+        closeDoor.Invoke();
     }
 
 

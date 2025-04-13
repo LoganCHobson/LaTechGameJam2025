@@ -12,7 +12,7 @@ abstract public class Item : MonoBehaviour
     public GameObject gfx;
 
     [HideInInspector]
-    public GameObject inventoryGfx; //Don't ref this 
+    public GameObject inventoryGfx; //Don't access this 
 
     public UnityEvent onPickUp;
 
