@@ -144,7 +144,7 @@ TextureImporter:
         width: 859
         height: 1286
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -165,7 +165,7 @@ TextureImporter:
         width: 799
         height: 993
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -181,12 +181,12 @@ TextureImporter:
       name: Nature PNG_2
       rect:
         serializedVersion: 2
-        x: 189
-        y: 266
-        width: 161
-        height: 161
+        x: 186
+        y: 264
+        width: 164
+        height: 165
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -202,12 +202,12 @@ TextureImporter:
       name: Nature PNG_4
       rect:
         serializedVersion: 2
-        x: 398
-        y: 265
-        width: 161
-        height: 161
+        x: 980
+        y: 33
+        width: 566
+        height: 816
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -223,12 +223,12 @@ TextureImporter:
       name: Nature PNG_5
       rect:
         serializedVersion: 2
-        x: 980
-        y: 33
-        width: 566
-        height: 816
+        x: 1626
+        y: 36
+        width: 328
+        height: 725
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -244,12 +244,12 @@ TextureImporter:
       name: Nature PNG_6
       rect:
         serializedVersion: 2
-        x: 1626
-        y: 36
-        width: 328
-        height: 725
+        x: 231
+        y: 72
+        width: 165
+        height: 165
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -262,43 +262,22 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Nature PNG_8
+      name: Nature PNG_3
       rect:
         serializedVersion: 2
-        x: 134
-        y: 421
-        width: 5
-        height: 5
+        x: 396
+        y: 264
+        width: 165
+        height: 165
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3657b781714f6904fa1eab90458910fa
-      internalID: 216647463
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Nature PNG_9
-      rect:
-        serializedVersion: 2
-        x: 233
-        y: 74
-        width: 161
-        height: 161
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bf7c4bb72260813488d326dcd99501dc
-      internalID: 928543648
+      spriteID: d0d7c2327441abd418e4f08a185c7022
+      internalID: -1501608191
       vertices: []
       indices: 
       edges: []
@@ -321,9 +300,6 @@ TextureImporter:
       Nature PNG_4: -1864447974
       Nature PNG_5: -535975372
       Nature PNG_6: 2004234885
-      Nature PNG_7: -1670467829
-      Nature PNG_8: 216647463
-      Nature PNG_9: 928543648
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

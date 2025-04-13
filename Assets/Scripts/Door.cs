@@ -23,7 +23,7 @@ public class Door : MonoBehaviour
                 
                 if (!unlocked && Inventory.Instance.FindItem(key.guid) == null)
                 {
-                    player.GetComponentInChildren<DialogController>().Dialog("Door is locked! Find the Key!");
+                    DialogController.Instance.Dialog("Door is locked! Find the Key!");
                 }
                 else
                 {

@@ -9,6 +9,10 @@ public class DialogController : MonoBehaviour
     /// Basically just get component and call this in any if statement. For example, you can check the invintory if the player has a key. If not, then run dialog.
     /// </summary>
     /// 
+
+
+    public static DialogController Instance;
+
     public TMP_Text text;
     public GameObject canvas;
 
@@ -20,6 +24,19 @@ public class DialogController : MonoBehaviour
     private int charIndex;
     private string fullMessage;
     private float timer;
+
+
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            Instance = this;
+        }
+    }
 
     private void Start()
     {

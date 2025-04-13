@@ -28,7 +28,7 @@ public class PlayerMovement : MonoBehaviour
         //float y = Input.GetAxisRaw("Vertical");
 
 
-         if (rigi.velocity.y !=0)
+         if (rigi.velocity.y > 0.00000001)
         {
             anim.Play("Fall");
             if (x > 0)
