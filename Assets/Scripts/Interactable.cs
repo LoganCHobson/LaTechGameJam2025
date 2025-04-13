@@ -5,13 +5,20 @@ using UnityEngine;
 
 public class Interact : MonoBehaviour
 {
+    public bool isLore;
     public string message;
     public bool onEnter;
 
     public Helper helper;
     public GameObject eye;
     // Start is called before the first frame update
-
+    private void Start()
+    {
+        if (!isLore)
+        {
+            message = "NULL";
+        }
+    }
     // Update is called once per frame
     private void Update()
     {

@@ -32,8 +32,10 @@ public class Game : MonoBehaviour
     void Start()
     {
         mainMenuScreen.SetActive(true);
+        eventGrab.GetComponent<RenderManager>().ChangeRenderFeature(modes.Grey);
         Instance = this;
         Red.SetActive(false);
+        Green.SetActive(false);
         Blue.SetActive(false);
         Green.SetActive(false);
 
@@ -114,5 +116,4 @@ public class Game : MonoBehaviour
         //    render.ChangeRenderFeature(modes.GreenBlue);
         //}
     }
-
 }

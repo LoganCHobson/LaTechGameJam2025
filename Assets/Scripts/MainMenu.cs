@@ -5,9 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    public LevelTransition levelTransition;
+
+    public GameObject eventGrab;
+    void Start()
+    {
+        eventGrab.GetComponent<RenderManager>().ChangeRenderFeature(modes.None);   
+    }
     public void OnClick()
     {
-        SceneManager.LoadScene("GamePlay");
+        levelTransition.LoadNextArea();
     }
 
     public void OnClickQuit()
