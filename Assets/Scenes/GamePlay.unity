@@ -1263,6 +1263,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ee4ee02350fe5a43a19119f86069b8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isLore: 0
   message: '"Weird. . I thought I had left the key here. I should find another perspective"'
   onEnter: 1
   helper: {fileID: 193221408}
@@ -5411,6 +5412,10 @@ PrefabInstance:
       propertyPath: Green
       value: 
       objectReference: {fileID: 1173001263}
+    - target: {fileID: 5636131864636830980, guid: 0f95c39080ef7604f99903e888873812, type: 3}
+      propertyPath: render
+      value: 
+      objectReference: {fileID: 98330508}
     - target: {fileID: 5636131864636830980, guid: 0f95c39080ef7604f99903e888873812, type: 3}
       propertyPath: RedBlue
       value: 
