@@ -67,5 +67,4 @@ public class Game : MonoBehaviour{
             eventGrab.GetComponent<RenderManager>().ChangeRenderFeature(modes.GreenBlue);
         }
     }
-
 }
