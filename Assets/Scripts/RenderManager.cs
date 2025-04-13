@@ -6,11 +6,14 @@ using UnityEngine.Rendering;
 public class RenderManager : MonoBehaviour
 {
     public Material material;
-    public Shader[] shaders; 
+    public Shader[] shaders;
+
+    public modes mode;
     
-    public void ChangeRenderFeature(modes mode)
+    public void ChangeRenderFeature(modes _mode)
     {
-        material.shader = shaders[(int)mode];
+        mode = _mode;
+        material.shader = shaders[(int)_mode];
     }
 }
 
