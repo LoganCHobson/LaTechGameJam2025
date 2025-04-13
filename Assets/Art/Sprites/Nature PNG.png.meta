@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5944620c8ae587347b5b8532256dd898
+guid: a517c16e80f20f946b91cd84822a7ba8
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -181,10 +181,10 @@ TextureImporter:
       name: Nature PNG_2
       rect:
         serializedVersion: 2
-        x: 145
-        y: 317
-        width: 218
-        height: 219
+        x: 189
+        y: 266
+        width: 161
+        height: 161
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -202,10 +202,10 @@ TextureImporter:
       name: Nature PNG_4
       rect:
         serializedVersion: 2
-        x: 427
-        y: 325
-        width: 164
-        height: 221
+        x: 398
+        y: 265
+        width: 161
+        height: 161
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -286,10 +286,10 @@ TextureImporter:
       name: Nature PNG_9
       rect:
         serializedVersion: 2
-        x: 186
-        y: 84
-        width: 164
-        height: 165
+        x: 233
+        y: 74
+        width: 161
+        height: 161
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
