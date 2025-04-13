@@ -19,6 +19,8 @@ abstract public class Item : MonoBehaviour
 
     private SpriteRenderer spriteRend;
 
+
+    bool collected;
     private void Awake()
     {
         if (guid == Guid.Empty)
@@ -40,7 +42,7 @@ abstract public class Item : MonoBehaviour
     {
         if(other.CompareTag("Player"))
         {
-           
+           collected = true;
             onPickUp.Invoke();
             PickedUp();
         }
@@ -51,12 +53,24 @@ abstract public class Item : MonoBehaviour
         {
             Debug.Log("HOW");
         }
-        if(mode == Game.Instance.render.mode && !spriteRend.enabled)
+        if(mode == Game.Instance.render.mode && !spriteRend.enabled && !collected)
         {
             spriteRend.enabled = true;
             if(gameObject.GetComponent<BoxCollider2D>())
             {
                 gameObject.GetComponent<BoxCollider2D>().enabled = true;
+            }
+            
+        }
+        else
+        {
+            if(mode != modes.None && !spriteRend.enabled && !collected)
+            {
+                spriteRend.enabled = false;
+                if (gameObject.GetComponent<BoxCollider2D>())
+                {
+                    gameObject.GetComponent<BoxCollider2D>().enabled = false;
+                }
             }
             
         }

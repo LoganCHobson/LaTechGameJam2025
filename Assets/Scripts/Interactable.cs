@@ -14,17 +14,14 @@ public class Interact : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-        if (!isLore)
-        {
-            message = "NULL";
-        }
+       
     }
     // Update is called once per frame
     private void Update()
     {
         RaycastHit2D hit = Physics2D.BoxCast(transform.position, new Vector2(2, 2), 0, Vector2.down, 2);
 
-        if (hit.collider.gameObject.tag.Equals("Player"))
+        if (hit.collider != null && hit.collider.gameObject.CompareTag("Player"))
         {
             if (Input.GetKeyDown(KeyCode.Tab) && !onEnter)
             {

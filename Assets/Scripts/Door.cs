@@ -21,7 +21,7 @@ public class Door : MonoBehaviour
         RaycastHit2D hit = Physics2D.BoxCast(transform.position, new Vector2(2, 2), 0, Vector2.down, 2);
 
 
-        if (hit.collider.gameObject.CompareTag("Player"))
+        if (hit.collider != null && hit.collider.gameObject.CompareTag("Player"))
         {
             GameObject player = hit.collider.gameObject;
             if (Input.GetKeyDown(KeyCode.Tab))
