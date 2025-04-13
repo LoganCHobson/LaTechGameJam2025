@@ -59,7 +59,8 @@ public class Inventory : MonoBehaviour
             {
                 foreach (Transform child in inventoryVisual.transform)
                 {
-                    if(item.guid == child.GetComponent<Item>().guid) //Make sure we don't add an already existing item to the list.
+                    
+                    if(item.guid == child.GetComponent<Item>().guid && child != null) //Make sure we don't add an already existing item to the list.d
                     {
                         continue;
                     }

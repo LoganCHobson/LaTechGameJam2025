@@ -331,6 +331,15 @@ MonoBehaviour:
   spawnpoint: {fileID: 1601592483}
   unlocked: 0
   key: {fileID: 1268110842}
+  openDoor:
+    m_PersistentCalls:
+      m_Calls: []
+  closeDoor:
+    m_PersistentCalls:
+      m_Calls: []
+  lockedDoor:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!212 &56518282
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -591,6 +600,15 @@ MonoBehaviour:
   spawnpoint: {fileID: 1017395569}
   unlocked: 1
   key: {fileID: 0}
+  openDoor:
+    m_PersistentCalls:
+      m_Calls: []
+  closeDoor:
+    m_PersistentCalls:
+      m_Calls: []
+  lockedDoor:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!212 &106396111
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -767,6 +785,15 @@ MonoBehaviour:
   spawnpoint: {fileID: 978933069}
   unlocked: 1
   key: {fileID: 0}
+  openDoor:
+    m_PersistentCalls:
+      m_Calls: []
+  closeDoor:
+    m_PersistentCalls:
+      m_Calls: []
+  lockedDoor:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!212 &123181389
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2387,6 +2414,15 @@ MonoBehaviour:
   spawnpoint: {fileID: 689996341}
   unlocked: 1
   key: {fileID: 0}
+  openDoor:
+    m_PersistentCalls:
+      m_Calls: []
+  closeDoor:
+    m_PersistentCalls:
+      m_Calls: []
+  lockedDoor:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &587161658
 GameObject:
   m_ObjectHideFlags: 0
@@ -3311,6 +3347,15 @@ MonoBehaviour:
   spawnpoint: {fileID: 1549861287}
   unlocked: 1
   key: {fileID: 0}
+  openDoor:
+    m_PersistentCalls:
+      m_Calls: []
+  closeDoor:
+    m_PersistentCalls:
+      m_Calls: []
+  lockedDoor:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!50 &721045028
 Rigidbody2D:
   serializedVersion: 4
@@ -4631,6 +4676,15 @@ MonoBehaviour:
   spawnpoint: {fileID: 877191758}
   unlocked: 0
   key: {fileID: 1268110842}
+  openDoor:
+    m_PersistentCalls:
+      m_Calls: []
+  closeDoor:
+    m_PersistentCalls:
+      m_Calls: []
+  lockedDoor:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!212 &897302161
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5918,6 +5972,15 @@ MonoBehaviour:
   spawnpoint: {fileID: 889666606}
   unlocked: 1
   key: {fileID: 0}
+  openDoor:
+    m_PersistentCalls:
+      m_Calls: []
+  closeDoor:
+    m_PersistentCalls:
+      m_Calls: []
+  lockedDoor:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!212 &1129453576
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6171,6 +6234,15 @@ MonoBehaviour:
   spawnpoint: {fileID: 1499685491}
   unlocked: 1
   key: {fileID: 0}
+  openDoor:
+    m_PersistentCalls:
+      m_Calls: []
+  closeDoor:
+    m_PersistentCalls:
+      m_Calls: []
+  lockedDoor:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!212 &1174493531
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7470,6 +7542,15 @@ MonoBehaviour:
   spawnpoint: {fileID: 1146527399}
   unlocked: 1
   key: {fileID: 0}
+  openDoor:
+    m_PersistentCalls:
+      m_Calls: []
+  closeDoor:
+    m_PersistentCalls:
+      m_Calls: []
+  lockedDoor:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!50 &1381199560
 Rigidbody2D:
   serializedVersion: 4
@@ -11508,6 +11589,15 @@ MonoBehaviour:
   spawnpoint: {fileID: 2059107529}
   unlocked: 0
   key: {fileID: 531111371}
+  openDoor:
+    m_PersistentCalls:
+      m_Calls: []
+  closeDoor:
+    m_PersistentCalls:
+      m_Calls: []
+  lockedDoor:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!212 &1539075112
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11645,6 +11735,14 @@ PrefabInstance:
     - target: {fileID: 2474727246544802039, guid: 9367e7abcb1cf3147ac9da2dcd647a8d, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 4733464622776325433, guid: 9367e7abcb1cf3147ac9da2dcd647a8d, type: 3}
+      propertyPath: m_overflowMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4733464622776325433, guid: 9367e7abcb1cf3147ac9da2dcd647a8d, type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6748748253419146164, guid: 9367e7abcb1cf3147ac9da2dcd647a8d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -12796,6 +12894,15 @@ MonoBehaviour:
   spawnpoint: {fileID: 1225674336}
   unlocked: 1
   key: {fileID: 0}
+  openDoor:
+    m_PersistentCalls:
+      m_Calls: []
+  closeDoor:
+    m_PersistentCalls:
+      m_Calls: []
+  lockedDoor:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!50 &1785325892
 Rigidbody2D:
   serializedVersion: 4
@@ -13217,6 +13324,15 @@ MonoBehaviour:
   spawnpoint: {fileID: 135462143}
   unlocked: 1
   key: {fileID: 0}
+  openDoor:
+    m_PersistentCalls:
+      m_Calls: []
+  closeDoor:
+    m_PersistentCalls:
+      m_Calls: []
+  lockedDoor:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!212 &1833925511
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -13477,6 +13593,15 @@ MonoBehaviour:
   spawnpoint: {fileID: 902968319}
   unlocked: 1
   key: {fileID: 0}
+  openDoor:
+    m_PersistentCalls:
+      m_Calls: []
+  closeDoor:
+    m_PersistentCalls:
+      m_Calls: []
+  lockedDoor:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!212 &1851621355
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -14393,6 +14518,15 @@ MonoBehaviour:
   spawnpoint: {fileID: 1096381208}
   unlocked: 1
   key: {fileID: 0}
+  openDoor:
+    m_PersistentCalls:
+      m_Calls: []
+  closeDoor:
+    m_PersistentCalls:
+      m_Calls: []
+  lockedDoor:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!212 &2040200986
 SpriteRenderer:
   m_ObjectHideFlags: 0
