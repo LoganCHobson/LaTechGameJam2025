@@ -328,7 +328,6 @@ MonoBehaviour:
   redBlue: {fileID: 1553493372}
   redGreen: {fileID: 319274495}
   greenBlue: {fileID: 1595295437}
-  change: {fileID: 1815185413}
 --- !u!1 &119843456
 GameObject:
   m_ObjectHideFlags: 0
@@ -1960,7 +1959,6 @@ GameObject:
   m_Component:
   - component: {fileID: 988052944}
   - component: {fileID: 988052948}
-  - component: {fileID: 988052947}
   - component: {fileID: 988052946}
   - component: {fileID: 988052945}
   m_Layer: 0
@@ -2064,14 +2062,6 @@ MonoBehaviour:
     m_MipBias: 0
     m_VarianceClampScale: 0.9
     m_ContrastAdaptiveSharpening: 0
---- !u!81 &988052947
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 988052943}
-  m_Enabled: 1
 --- !u!20 &988052948
 Camera:
   m_ObjectHideFlags: 0
@@ -2329,7 +2319,6 @@ MonoBehaviour:
   redBlue: {fileID: 1553493372}
   redGreen: {fileID: 319274495}
   greenBlue: {fileID: 1595295437}
-  change: {fileID: 1815185413}
 --- !u!1 &1323020911
 GameObject:
   m_ObjectHideFlags: 0
@@ -3998,7 +3987,6 @@ MonoBehaviour:
   redBlue: {fileID: 1553493372}
   redGreen: {fileID: 319274495}
   greenBlue: {fileID: 1595295437}
-  change: {fileID: 1815185413}
 --- !u!1 &1815185403
 GameObject:
   m_ObjectHideFlags: 0
@@ -4015,7 +4003,6 @@ GameObject:
   - component: {fileID: 1815185409}
   - component: {fileID: 1815185410}
   - component: {fileID: 1815185411}
-  - component: {fileID: 1815185413}
   - component: {fileID: 1815185412}
   m_Layer: 0
   m_Name: EventSystem
@@ -4329,24 +4316,6 @@ MonoBehaviour:
   mainMenuScreen: {fileID: 2114599083}
   gameOverlay: {fileID: 1632844316}
   eventGrab: {fileID: 1815185403}
---- !u!114 &1815185413
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1815185403}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93af45efe2f3ccf429dbae0f0015af62, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  redButton: {fileID: 617813788}
-  greenButton: {fileID: 1947261011}
-  blueButton: {fileID: 1909541064}
-  redBlueButton: {fileID: 1553493372}
-  redGreenButton: {fileID: 319274495}
-  greenBlueButton: {fileID: 1595295437}
 --- !u!1 &1849502718
 GameObject:
   m_ObjectHideFlags: 0

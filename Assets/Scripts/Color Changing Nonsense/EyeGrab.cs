@@ -5,7 +5,6 @@ using UnityEngine;
 public class EyeGrab : MonoBehaviour {
     public modes colors;
     public GameObject eyeBall;
-
     public GameObject ui;
     public GameObject red;
     public GameObject blue;
@@ -14,10 +13,7 @@ public class EyeGrab : MonoBehaviour {
     public GameObject redGreen;
     public GameObject greenBlue;
 
-    public ColorChange change;
-
-    private void Start()
-    {
+    private void Start(){
         ui.SetActive(false);
         redBlue.SetActive(false);
         redGreen.SetActive(false);
