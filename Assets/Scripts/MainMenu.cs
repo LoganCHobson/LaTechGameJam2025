@@ -7,10 +7,10 @@ public class MainMenu : MonoBehaviour
 {
     public LevelTransition levelTransition;
 
-    public GameObject eventGrab;
+   // public GameObject eventGrab;
     void Start()
     {
-        eventGrab.GetComponent<RenderManager>().ChangeRenderFeature(modes.None);   
+        //eventGrab.GetComponent<RenderManager>().ChangeRenderFeature(modes.None);   
     }
     public void OnClick()
     {
