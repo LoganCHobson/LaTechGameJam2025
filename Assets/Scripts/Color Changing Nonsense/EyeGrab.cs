@@ -13,21 +13,22 @@ public class EyeGrab : MonoBehaviour {
     public GameObject redGreen;
     public GameObject greenBlue;
 
-    private void Start(){
-        ui.SetActive(false);
-        redBlue.SetActive(false);
-        redGreen.SetActive(false);
-        greenBlue.SetActive(false); 
-    }
+    // private void Start(){
+    //     ui.SetActive(false);
+    //     redBlue.SetActive(false);
+    //     redGreen.SetActive(false);
+    //     greenBlue.SetActive(false); 
+    // }
     void OnTriggerEnter2D(Collider2D collision){
         if (collision.CompareTag("Player")){
             Debug.Log("Collected an eye! " + colors);
             Debug.Log(eyeBall);
-            eyeBall.SetActive(false);
+            
 
             ui.SetActive(true);
             Debug.Log("Ui is "+ ui);
             Debug.Log(ui.activeInHierarchy);
+
             SoundManager.Play(SoundType.GRABBED);
 
             if (red.activeInHierarchy && blue.activeInHierarchy){
@@ -42,6 +43,7 @@ public class EyeGrab : MonoBehaviour {
             if (red.activeInHierarchy && green.activeInHierarchy && blue.activeInHierarchy){
                 Game.GameComplete();
             }
+            eyeBall.SetActive(false);
         }
     }
 }

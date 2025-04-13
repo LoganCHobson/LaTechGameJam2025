@@ -20,6 +20,8 @@ public class Game : MonoBehaviour{
     void Start(){
         mainMenuScreen.SetActive(true);
         Instance = this;
+        Red.SetActive(false);
+        Blue.SetActive(false);
     }
     public void StartGame(){
         mainMenuScreen.SetActive(false);
