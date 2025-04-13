@@ -1,5 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Game : MonoBehaviour
 {
@@ -16,7 +18,12 @@ public class Game : MonoBehaviour
     public GameObject RedGreen;
     public GameObject GreenBlue;
 
+
+    public Slider slider;
     public Animator anim;
+
+    public float timer = 36000;
+    private float time;
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -31,6 +38,12 @@ public class Game : MonoBehaviour
 
     void Start()
     {
+        slider.value = 0;
+        slider.maxValue = timer;
+        DialogController.Instance.Dialog("Another dreary day. . Maybe if I can make it to the field to watch the sunset it'll get better. .");
+
+        time = 0;
+        
         mainMenuScreen.SetActive(true);
         render.GetComponent<RenderManager>().ChangeRenderFeature(modes.Grey);
         Instance = this;
@@ -64,6 +77,16 @@ public class Game : MonoBehaviour
     }
     void Update()
     {
+        time += Time.deltaTime;
+        slider.value = time;
+
+
+        if(time >= timer)
+        {
+            SceneManager.LoadScene("Gameplay");
+        }
+
+
         if (Input.GetKey(KeyCode.Escape))
         {
             PauseGame();
@@ -115,5 +138,10 @@ public class Game : MonoBehaviour
         //if(Input.GetKey(KeyCode.Alpha6) && GreenBlue.activeInHierarchy){
         //    render.ChangeRenderFeature(modes.GreenBlue);
         //}
+    }
+
+    public void Win()
+    {
+        SceneManager.LoadScene("Win");
     }
 }
