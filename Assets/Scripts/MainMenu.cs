@@ -10,7 +10,7 @@ public class MainMenu : MonoBehaviour
     public GameObject eventGrab;
     void Start()
     {
-        eventGrab.GetComponent<RenderManager>().ChangeRenderFeature(modes.Grey);   
+        eventGrab.GetComponent<RenderManager>().ChangeRenderFeature(modes.None);   
     }
     public void OnClick()
     {
