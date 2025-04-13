@@ -23,7 +23,7 @@ public class EyeGrab : MonoBehaviour {
         if (collision.CompareTag("Player")){
             Debug.Log("Collected an eye! " + colors);
             Debug.Log(eyeBall);
-            
+            DialogController.Instance.Dialog("I doubt another outlook will change anything, but what the heck.");
 
             ui.SetActive(true);
             Debug.Log("Ui is "+ ui);

@@ -71,27 +71,27 @@ public class Game : MonoBehaviour
         if (Input.GetKey(KeyCode.Alpha1) && Red.activeInHierarchy)
         {
             
-            if (anim.GetCurrentAnimatorStateInfo(0).IsName("Cooldown"))
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("FadeRed"))
             {
                 return;
             }
             else
             {
                 render.ChangeRenderFeature(modes.Red);
-                anim.Play("Cooldown");
+                anim.Play("FadeRed");
             }
 
         }
         if (Input.GetKey(KeyCode.Alpha2) && Green.activeInHierarchy)
         {
-            if (anim.GetCurrentAnimatorStateInfo(0).IsName("Cooldown"))
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("FadeGreen"))
             {
                 return;
             }
             else
             {
                 render.ChangeRenderFeature(modes.Green);
-                anim.Play("Cooldown");
+                anim.Play("FadeGreen");
             }
         }
         if (Input.GetKey(KeyCode.Alpha3) && Blue.activeInHierarchy)

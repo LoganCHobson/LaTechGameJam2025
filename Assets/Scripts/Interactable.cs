@@ -11,6 +11,7 @@ public class Interact : MonoBehaviour
 
     public Helper helper;
     public GameObject eye;
+    public LayerMask layerMask;
     // Start is called before the first frame update
     private void Start()
     {
@@ -19,7 +20,7 @@ public class Interact : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        RaycastHit2D hit = Physics2D.BoxCast(transform.position, new Vector2(2, 2), 0, Vector2.down, 2);
+        RaycastHit2D hit = Physics2D.BoxCast(transform.position, new Vector2(2, 2), 0, Vector2.down, 2, layerMask);
 
         if (hit.collider != null && hit.collider.gameObject.CompareTag("Player"))
         {

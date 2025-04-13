@@ -1,7 +1,5 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -17,7 +15,10 @@ abstract public class Item : MonoBehaviour
     public UnityEvent onPickUp;
     public modes mode;
 
-    private SpriteRenderer spriteRend;
+
+
+    public List<SpriteRenderer> spriteRends;
+
 
 
     bool collected;
@@ -30,50 +31,101 @@ abstract public class Item : MonoBehaviour
     }
     void Start()
     {
-        spriteRend = gameObject.GetComponent<SpriteRenderer>();
-       if(mode != modes.None)
+
+
+        if (mode != modes.None)
         {
-            spriteRend.enabled = false;
+            foreach (SpriteRenderer spriteRend in spriteRends)
+            {
+
+                spriteRend.enabled = false;
+
+            }
+
+
             gameObject.GetComponent<BoxCollider2D>().enabled = false;
         }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.CompareTag("Player"))
+        if (other.CompareTag("Player"))
         {
-           collected = true;
+            collected = true;
             onPickUp.Invoke();
             PickedUp();
         }
     }
     private void Update()
     {
-        if ( Game.Instance.render == null)
+        if (Game.Instance.render == null)
         {
             Debug.Log("HOW");
         }
-        if(mode == Game.Instance.render.mode && !spriteRend.enabled && !collected)
+        if (mode == Game.Instance.render.mode)
         {
-            spriteRend.enabled = true;
-            if(gameObject.GetComponent<BoxCollider2D>())
+            if (!CheckRends() && !collected)
             {
-                gameObject.GetComponent<BoxCollider2D>().enabled = true;
+
+
+                foreach (SpriteRenderer spriteRend in spriteRends)
+                {
+
+                    spriteRend.enabled = true;
+
+                }
+                if (gameObject.GetComponent<BoxCollider2D>())
+                {
+                    gameObject.GetComponent<BoxCollider2D>().enabled = true;
+                }
             }
-            
         }
+
         else
         {
-            if(mode != modes.None && !spriteRend.enabled && !collected)
+
+
+            if (mode != modes.None && CheckRends() == true && !collected)
             {
-                spriteRend.enabled = false;
+                foreach (SpriteRenderer spriteRend in spriteRends)
+                {
+
+                    spriteRend.enabled = false;
+
+                }
                 if (gameObject.GetComponent<BoxCollider2D>())
                 {
                     gameObject.GetComponent<BoxCollider2D>().enabled = false;
                 }
             }
-            
         }
+
+    }
+
+    private bool CheckRends()
+    {
+        int i = 0;
+        foreach (SpriteRenderer spriteRend in spriteRends)
+        {
+
+            if (spriteRend.enabled)
+            {
+                i++;
+            }
+
+
+        }
+        if (i > 0)
+        {
+            Debug.Log("Nah");
+            return true;
+        }
+        else
+        {
+            Debug.Log("Yah");
+            return false;
+        }
+
     }
 
     abstract public void PickedUp();
