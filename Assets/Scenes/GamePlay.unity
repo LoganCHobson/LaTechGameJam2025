@@ -2029,6 +2029,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  dialog: This key has the number one on it. Forgot I left this here. .
 --- !u!212 &531111373
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6306,6 +6307,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!20 &1207409996 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 870068667763417552, guid: 423a2b3234df21842a3721e774576e66, type: 3}
+  m_PrefabInstance: {fileID: 1748843844}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1225674335
 GameObject:
   m_ObjectHideFlags: 0
@@ -6849,6 +6855,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  dialog: This key has the number two on it. I don't even remember what it goes to.
+    .
 --- !u!212 &1268110844
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -11630,6 +11638,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 105427321929518743, guid: 9367e7abcb1cf3147ac9da2dcd647a8d, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1207409996}
     - target: {fileID: 2474727246544802039, guid: 9367e7abcb1cf3147ac9da2dcd647a8d, type: 3}
       propertyPath: m_Name
       value: Player
