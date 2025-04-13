@@ -32,6 +32,10 @@ public class Inventory : MonoBehaviour
 
     public void AddItem(Item item)
     {
+        if (items.ContainsKey(item.guid))
+        {
+            item.guid = Guid.NewGuid();
+        }
         items.Add(item.guid, item);
         Debug.Log("Added Item");
 
